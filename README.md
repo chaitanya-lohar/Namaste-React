@@ -15,3 +15,18 @@
 - Code Splitting (This allows you to split your application code into separate bundles which can be loaded on demand)
 - Tree Shaking (remove unused code from your file)
 
+
+
+# Header
+    - logo
+    - navItems
+# Body
+    - Search
+    - RestaurantContainer
+        - RestaurantCart
+            - Images
+# Footer
+    - Copyright
+    - links
+    - Address
+    - Contact
