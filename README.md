@@ -30,3 +30,10 @@
     - links
     - Address
     - Contact
+
+
+# Hook
+    * Normal javascript functions
+    Most important react hooks are :
+        -useState()   super powerful variable
+        -useEffect() use to call api

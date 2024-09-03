@@ -71,3 +71,11 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.filterBtn{
+  padding:5px;
+  margin:10px;
+}
+.filterBtn:hover{
+  cursor: pointer;
+}
