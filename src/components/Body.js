@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   // State Variable  - Super powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -28,25 +29,40 @@ const Body = () => {
   if (listOfRestaurants.length === 0) {
     const components = [];
     for (let i = 0; i < 10; i++) {
-      components.push(<Shimmer />);
+      components.push(<Shimmer key={i} />);
     }
     return <div className="shimmer-container">{components}</div>;
   }
   return (
     <div className="body">
-      <div className="filter">
-        <button
-          className="filterBtn"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter((rest) => {
-              return rest.info.avgRating > 4;
-            });
-            setListOfRestaurants(filteredList);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+      <div className="search">
+        <div className="searchBox">
+          <input
+            className="searchInput"
+            value={searchText}
+            onChange={(event) => {
+              setSearchText(event.target.value);
+            }}
+          />
+          <button className="searchBtn" onClick={() => {}}>
+            Search
+          </button>
+        </div>
+        <div className="filter">
+          <button
+            className="filterBtn"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter((rest) => {
+                return rest.info.avgRating > 4;
+              });
+              setListOfRestaurants(filteredList);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
+
       <div className="restContainer">
         {listOfRestaurants.map((restaurant, index) => (
           <RestaurantCart

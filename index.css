@@ -1,6 +1,7 @@
 .header {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: rgb(250, 247, 247);
 }
@@ -11,7 +12,8 @@
 .navItems > ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .navItems {
@@ -71,6 +73,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .filterBtn{
@@ -103,6 +106,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .Img{
@@ -136,4 +140,66 @@ body {
   width: 90%;
   height: 20px;
 }
+.navItems>ul{
+  align-items: center;
+}
+.LoginBtn{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 120px;
+}
 
+.filterBtn{
+  background-color:#f44336;
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px 0px 12px;
+  cursor: pointer;
+  width: 15.5rem;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.searchBtn{
+  background-color:#acabab;
+  border: none;
+  color:black;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px 0px 12px;
+  cursor: pointer;
+}
+
+.searchInput{
+  padding: 12px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left:5px;
+}
+
+.searchBox{
+  margin-left:10px;
+}
